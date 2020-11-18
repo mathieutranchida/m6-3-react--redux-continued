@@ -18,7 +18,6 @@ app.get("/spotify_access_token", async (req, res, next) => {
   const authString = Buffer.from(clientId + ":" + clientSecret).toString(
     "base64"
   );
-  console.log(authString);
   const response = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
